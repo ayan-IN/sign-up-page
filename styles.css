@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Norse;
+  src: url('fonts/Norse-Bold.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 100vh;
+}
+.main-container .left-section {
+  background-image: url('images/bg.avif');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-container .left-section .logo-container {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+.main-container .left-section .logo-container > span {
+  font-family: Norse;
+  color: white;
+  font-size: 72px;
+}
+
+.main-container .right-section .preface-section {
+  background-color: #f9fafb;
+  padding: 100px 50px 30px;
+  font-size: 24px;
+}
+.main-container .right-section .info-section {
+  padding: 10px 50px 30px;
+}
+.main-container .right-section .action-section {
+  padding: 100px 50px 30px;
+}
+.main-container .right-section .info-section .title {
+  font-size: 32px;
+}
+.main-container .right-section .info-section .field-container > div {
+  display: flex;
+  flex-direction: column;
+}
+.main-container .right-section .info-section .field-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 100px;
+}
