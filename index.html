@@ -12,54 +12,82 @@
       <div class="left-section">
         <div class="logo-container">
           <img src="images/odin-lined.png" alt="logo" width="100px" />
-          <span>ODIN</span>
+          <div id="logo">ODIN</div>
         </div>
       </div>
       <div class="right-section">
         <div class="preface-section">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          minim veniam, quis nostrud <span id="quote"> exercitation ullamco </span>
         </div>
         <div class="info-section">
-          <form action="#">
+          <form action="#" id="customForm">
             <div class="title">Let's do this!</div>
             <div class="field-container">
               <div>
-                <label for="first_name">FIRST NAME</label>
-                <input type="text" />
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" id="firstName" name="firstName" required />
+                <div id="fnError" class="error"></div>
               </div>
               <div>
-                <label for="last_name">LAST NAME</label>
-                <input type="text" />
+                <label for="lastName">LAST NAME</label>
+                <input type="text" id="lastName" name="lastName" required />
+                <div id="lnError" class="error"></div>
               </div>
               <div>
                 <label for="email">EMAIL</label>
-                <input type="text" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="off"
+                />
+                <div id="emailError" class="error"></div>
               </div>
               <div>
-                <label for="phone_number">PHONE NUMBER</label>
-                <input type="text" />
+                <label for="phoneNumber">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  required
+                  pattern="[0-9]{10}"
+                />
+                <div id="pnError" class="error"></div>
               </div>
               <div>
                 <label for="password">PASSWORD</label>
-                <input type="text" />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                />
+                <div id="passwordError" class="error"></div>
               </div>
               <div>
-                <label for="confirm_password">CONFIRM PASSWORD</label>
-                <input type="text" />
+                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                />
+                <div id="passwordCError" class="error"></div>
               </div>
             </div>
           </form>
         </div>
         <div class="action-section">
-          <button>Create Account</button>
+          <button type="submit" form="customForm">Create Account</button>
           <div>Already have an account? <span>Log in</span></div>
         </div>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

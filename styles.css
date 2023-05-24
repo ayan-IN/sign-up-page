@@ -2,6 +2,18 @@
   font-family: Norse;
   src: url('fonts/Norse-Bold.otf');
 }
+@font-face {
+  font-family: Kiona_reg;
+  src: url('fonts/kiona_2/Kiona-Regular.ttf');
+}
+@font-face {
+  font-family: Kiona_Itallic;
+  src: url('fonts/kiona_2/Kiona-Itallic.ttf');
+}
+@font-face {
+  font-family: Kiona_Bold;
+  src: url('fonts/kiona_2/FontsFree-Net-Kiona-Bold.ttf');
+}
 
 body {
   margin: 0;
@@ -11,6 +23,8 @@ body {
   display: grid;
   grid-template-columns: 40% 60%;
   height: 100vh;
+  font-family: Kiona_reg;
+  text-transform: none;
 }
 .main-container .left-section {
   background-image: url('images/bg.avif');
@@ -26,32 +40,95 @@ body {
   align-items: center;
   padding: 10px 0px;
 }
-.main-container .left-section .logo-container > span {
+#logo {
   font-family: Norse;
   color: white;
   font-size: 72px;
 }
-
+.main-container .right-section {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
 .main-container .right-section .preface-section {
   background-color: #f9fafb;
-  padding: 100px 50px 30px;
+  padding: 50px 50px 10px;
   font-size: 24px;
 }
 .main-container .right-section .info-section {
-  padding: 10px 50px 30px;
+  padding: 10px 250px 0px 50px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+#quote {
+  font-family: Kiona_Itallic;
 }
 .main-container .right-section .action-section {
-  padding: 100px 50px 30px;
+  padding: 20px 50px;
+  background-color: #f9fafb;
+}
+.main-container .right-section .action-section > div > span {
+  color: #596d48;
+  font-family: Kiona_Bold;
+  cursor: pointer;
 }
 .main-container .right-section .info-section .title {
   font-size: 32px;
+  margin-bottom: 30px;
 }
 .main-container .right-section .info-section .field-container > div {
   display: flex;
   flex-direction: column;
+  grid-row-gap: 5px;
+  margin: 5px 0px;
 }
+input {
+  height: 35px;
+  border: #e5e7eb 2px solid;
+  border-radius: 5px;
+  padding: 1px 10px;
+  margin-bottom: 20px;
+}
+
 .main-container .right-section .info-section .field-container {
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 100px;
+}
+.main-container .right-section .action-section > button {
+  background-color: #596d48;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin: 10px 0;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.main-container .right-section .info-section .field-container > div {
+  position: relative;
+}
+#password,
+#confirmPassword {
+  margin-bottom: 50px;
+}
+input:focus {
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  outline: none;
+}
+
+input:invalid:focus {
+  border: 2px solid rgb(255, 69, 100);
+}
+
+input:focus:valid {
+  border: #03c988 2px solid;
+}
+
+.main-container .right-section .info-section .error {
+  font-family: Kiona_Bold;
+  font-size: 0.7rem;
+  color: rgb(255, 69, 100);
+  position: absolute;
+  bottom: 0;
 }
