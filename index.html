@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Odin Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="left-section">
+        <div class="logo-container">
+          <img src="images/odin-lined.png" alt="logo" width="100px" />
+          <div id="logo">ODIN</div>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="preface-section">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud <span id="quote"> exercitation ullamco </span>
+        </div>
+        <div class="info-section">
+          <form action="#" id="customForm">
+            <div class="title">Let's do this!</div>
+            <div class="field-container">
+              <div>
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" id="firstName" name="firstName" required />
+                <div id="fnError" class="error"></div>
+              </div>
+              <div>
+                <label for="lastName">LAST NAME</label>
+                <input type="text" id="lastName" name="lastName" required />
+                <div id="lnError" class="error"></div>
+              </div>
+              <div>
+                <label for="email">EMAIL</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="off"
+                />
+                <div id="emailError" class="error"></div>
+              </div>
+              <div>
+                <label for="phoneNumber">PHONE NUMBER</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  required
+                  pattern="[0-9]{10}"
+                />
+                <div id="pnError" class="error"></div>
+              </div>
+              <div>
+                <label for="password">PASSWORD</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                />
+                <div id="passwordError" class="error"></div>
+              </div>
+              <div>
+                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                />
+                <div id="passwordCError" class="error"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="action-section">
+          <button type="submit" form="customForm">Create Account</button>
+          <div>Already have an account? <span>Log in</span></div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
